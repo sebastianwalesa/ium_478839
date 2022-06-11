@@ -1,0 +1,19 @@
+name: training-evaluation
+on: [push]
+jobs:
+  run:
+    runs-on: [ubuntu-latest]
+    steps:
+      - uses: actions/checkout@v3
+      - uses: actions/setup-python@v3.1.2
+      - uses: iterative/setup-cml@v1
+      - name: Train model
+        env:
+          REPO_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          pip install -r requirements.txt
+          python ml_pytorch.py
+          python ml_pytorch_results.py
+          cat metrics.txt >> report.md
+          cml-publish RMSplot.png --md >> report.md
+          cml-send-comment report.md
