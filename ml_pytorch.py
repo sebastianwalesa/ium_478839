@@ -152,7 +152,7 @@ for i in random.sample(range(0, len(val_ds)), 10):
 # In[15]:
 
 
-with open("result.txt", "w+") as file:
+with open("result.txt", "a+") as file:
     for i in range(0, len(val_ds), 1):
         input_, target = val_ds[i]
         file.write(str(predict_single(input_, target, model)))
