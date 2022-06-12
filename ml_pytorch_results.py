@@ -155,10 +155,10 @@ def prediction(input, target, model):
 # In[10]:
 
 
-with open("result.txt", "a+") as file:
-    for i in range(0, len(val_ds), 1):
-        input_, target = val_ds[i]
-        file.write(str(predict_single(input_, target, model)))
+# with open("result.txt", "a+") as file:
+#     for i in range(0, len(val_ds), 1):
+#         input_, target = val_ds[i]
+#         file.write(str(predict_single(input_, target, model)))
 
 
 # In[11]:
