@@ -178,7 +178,7 @@ MAE = mean_absolute_error(expected, predicted)
 #     file.write("Mean squared error: MSE = "+ str(MSE) + "\n")
 #     file.write("Mean absolute error: MAE = "+ str(MAE)+ "\n")
 
-with open('MSE.txt', 'w+') as file:
+with open('MSE.txt') as file:
     file.write(str(MSE) + "\n")
 
 
