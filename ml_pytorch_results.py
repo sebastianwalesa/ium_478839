@@ -174,9 +174,9 @@ for i in range(0, len(val_ds), 1):
 MSE = mean_squared_error(expected, predicted)
 MAE = mean_absolute_error(expected, predicted)
 
-with open("metrics.txt", "a+") as file:
-    file.write("Mean squared error: MSE = "+ str(MSE) + "\n")
-    file.write("Mean absolute error: MAE = "+ str(MAE)+ "\n")
+# with open("metrics.txt", "a+") as file:
+#     file.write("Mean squared error: MSE = "+ str(MSE) + "\n")
+#     file.write("Mean absolute error: MAE = "+ str(MAE)+ "\n")
 
 with open("MSE.txt", "a+") as file:
     file.write(str(MSE) + "\n")
