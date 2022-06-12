@@ -185,7 +185,7 @@ with open("MSE.txt", "a+") as file:
 # In[12]:
 
 
-with open("MSE.txt", "a+") as file:
+with open('MSE.txt') as file:
     y_MSE = [float(line) for line in file if line]
     x_builds = list(range(1, len(y_MSE) + 1))
 
