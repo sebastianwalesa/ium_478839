@@ -14,6 +14,8 @@ jobs:
           pip install -r requirements.txt
           python ml_pytorch.py
           python ml_pytorch_results.py
+          python ml_pytorch_results.py
+
           cat MSE.txt >> report.md
           cml-publish RMSplot.png --md >> report.md
           cml-send-comment report.md
